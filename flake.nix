@@ -50,9 +50,9 @@
 					pkgs.dumbo = dumbo_pkg;
 					services.dumbo = with lib; let
 						opt = type: description: mkOption {
-							type: type,
-							description: description
-						}
+							type: type;
+							description: description;
+						};
 					in {
 						enable = mkxEnableOption "Enable dumbo daemon";
 
