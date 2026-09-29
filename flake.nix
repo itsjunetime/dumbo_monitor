@@ -60,11 +60,10 @@
 						ntfyTopic = opt types.str "The ntfy topic";
 						passiveMode = opt types.bool "If true, the daemon will never try to take any actions besides reporting issues";
 						watchModules = opt
-							(lib.types.listOf (lib.types.attrsOf (lib.types.submodule (
+							(lib.types.attrsOf (lib.types.submodule (
 								{ name, ... }:
 								{
 									options = {
-										name = opt types.str "The kernel module the following options describe";
 										ensureLoaded = opt types.bool "If true, the daemon will check if the given module is loaded. If not, it will do no such checking";
 										ensureUsedBy = opt
 											(types.listOf (types.ints.between 0 65536))
@@ -85,20 +84,19 @@
 											"What to do when any of the checks above fail";
 									};
 								};
-							))))
+							)))
 							"Modules to watch";
 
 						watchMountpoints = opt
-							(lib.types.listOf (lib.types.attrsOf (lib.types.submodule (
+							(lib.types.attrsOf (lib.types.submodule (
 								{ device, ... }: {
 									options = {
-										device = opt types.str "The block device that the following options monitor";
-										mount_point = opt types.str "The mount point that we expect this block device to be mounted to";
+										mountPoint = opt types.str "The mount point that we expect this block device to be mounted to";
 										fsType = opt types.str "The FS type that we expect this block device/mount point to have";
 										options = opt (types.listOf types.str) "The mount options that we should try to use when re-mounting this upon encountering a failure";
 									};
 								};
-							))))
+							)))
 							"Mountpoints to monitor/watch";
 
 						ensureReadableFilesWithin = opt

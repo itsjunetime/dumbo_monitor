@@ -312,7 +312,6 @@ pub fn check_modules_with_system<F: PciFetcher>(
                 for device in &pci_devices {
                     let device = match device {
                         Ok(d) => d,
-                        // Err(e) => todo!(), // log error
                         Err(e) => {
                             println!("[ERROR] Failed to retrieve a pci device: {e}");
                             continue;
