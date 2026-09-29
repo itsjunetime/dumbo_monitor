@@ -1,0 +1,22 @@
+[package]
+name = "dumbo_monitor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+pci-info = "0.3"
+sys-mount = "3"
+ntfy = { version = "0.8", default-features = false, features = [ "blocking" ] }
+knus = "3"
+miette = { version = "7", features = [ "fancy" ] }
+clap = { version = "4", features = [ "derive", "env" ] }
+fs-err = "3"
+thiserror = "2"
+rand = { version = "0.9", features = [ "thread_rng" ] }
+# rustix = { version = "1", features = [ "process", "alloc" ] }
+yoke = { version = "0.8", features = [ "derive" ] }
+iddqd = "0.3"
+# rustix for finit_module
+
+[dev-dependencies]
+pretty_assertions = "1"
