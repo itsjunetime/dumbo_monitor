@@ -136,7 +136,7 @@
 							Restart = "always";
 
 							DynamicUser = true;
-							ExecStart = "${dumbo_pkg}/bin/dumbo --config-file ${kdl_config_file}" # pass in cli args
+							ExecStart = "${dumbo_pkg}/bin/dumbo --config-file ${kdl_config_file}"; # pass in cli args
 						};
 					};
 				};
