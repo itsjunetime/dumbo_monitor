@@ -125,7 +125,7 @@
 							name = "dumbo.kdl";
 							text = (kdl.formats.v2 kdl_data);
 						};
-					{
+					in {
 						description = "dumbo daemon for watching a few simple system conditions and warning whenever they are not met";
 						wantedBy = [ "multi-user.target" ];
 						# after = # figure out this one. Probably ntfy
