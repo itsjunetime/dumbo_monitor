@@ -11,6 +11,7 @@
 		self,
 		nixpkgs,
 		rust-overlay,
+		flake-utils,
 		nix-kdl
 	}: flake-utils.lib.eachDefaultSystem (system: let
 		overlays = [(import rust-overlay)];
