@@ -95,7 +95,7 @@
 										fsType = opt types.str "The FS type that we expect this block device/mount point to have";
 										options = opt (types.listOf types.str) "The mount options that we should try to use when re-mounting this upon encountering a failure";
 									};
-								};
+								}
 							)))
 							"Mountpoints to monitor/watch";
 
