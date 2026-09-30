@@ -83,7 +83,7 @@
 											}))
 											"What to do when any of the checks above fail";
 									};
-								};
+								}
 							)))
 							"Modules to watch";
 
